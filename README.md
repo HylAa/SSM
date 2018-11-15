@@ -1,10 +1,7 @@
-# BootDo 面向学习型的开源框架
+# 学习型的开源框架
 
 ## 平台简介
 
-一群[]<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=5ojKYFG"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="BootDo交流群" title="BootDo交流群"></a>
-二群<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=54UlM7d"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="BootDo交流群" title="BootDo交流群"></a>
-三群:<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=5rB9i8M"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="BootDo交流群" title="BootDo交流群"></a>
 
 BootDo是高效率，低封装，面向学习型，面向微服的**开源**Java EE开发框架。
 
@@ -78,15 +75,5 @@ BootDo 提供了常用工具进行封装，包括日志工具、缓存工具、�
 
 ## [www.bootdo.com](http://www.bootdo.com)
 
-## 交流反馈
-
-## QQ群 669039323（满），614726589<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=54UlM7d"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="BootDo交流群" title="BootDo交流群"></a>
-
-## 版权声明
-
 本软件使用 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) 协议，请严格遵照协议内容
 
-- [x] 注：已上内容为整体规化，部分功能还在实现中
-
-如果感觉对您有帮助，请作者喝杯咖啡吧，请注明您的名字或者昵称，方便作者感谢o(*￣︶￣*)o
-![输入图片说明](https://gitee.com/uploads/images/2018/0228/172207_751b45c4_1204498.jpeg "843167056429717736.jpg")![输入图片说明](https://gitee.com/uploads/images/2018/0228/172216_fbcc5c30_1204498.jpeg "12959670678378076.jpg")
