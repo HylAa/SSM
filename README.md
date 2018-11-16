@@ -72,8 +72,6 @@ BootDo 提供了常用工具进行封装，包括日志工具、缓存工具、�
 6. 强制访问：系统对所有管理端链接都进行用户身份权限验证，防止用户直接填写url进行访问。
 
 ## 演示地址
-
 ## [www.bootdo.com](http://www.bootdo.com)
 
-本软件使用 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) 协议，请严格遵照协议内容
 
