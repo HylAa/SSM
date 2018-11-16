@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bootdo.smoke.dao.SmokeDao">
+
+    <select id="get" resultType="com.bootdo.smoke.domain.SmokeDO">
+		select `id`,`smokename`,`smokemoney`,`smokefactory`,`evaluation` from t_smoke where id = #{value}
+	</select>
+
+    <select id="list" resultType="com.bootdo.smoke.domain.SmokeDO">
+        select `id`,`smoke_name`,`smoke_money`,`smoke_factory`,`evaluation` from t_smoke
+        <where>
+            <if test="id != null and id != ''"> and id = #{id} </if>
+            <if test="smokename != null and smokename != ''"> and smokename = #{smokename} </if>
+            <if test="smokemoney != null and smokemoney != ''"> and smokemoney = #{smokemoney} </if>
+            <if test="smokefactory != null and smokefactory != ''"> and smokefactory = #{smokefactory} </if>
+            <if test="evaluation != null and evaluation != ''"> and evaluation = #{evaluation} </if>
+        </where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+            <otherwise>
+                order by id desc
+            </otherwise>
+        </choose>
+        <if test="offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="count" resultType="int">
+        select count(*) from t_smoke
+        <where>
+            <if test="id != null and id != ''"> and id = #{id} </if>
+            <if test="smokename != null and smokename != ''"> and smokename = #{smokename} </if>
+            <if test="smokemoney != null and smokemoney != ''"> and smokemoney = #{smokemoney} </if>
+            <if test="smokefactory != null and smokefactory != ''"> and smokefactory = #{smokefactory} </if>
+            <if test="evaluation != null and evaluation != ''"> and evaluation = #{evaluation} </if>
+        </where>
+    </select>
+
+    <insert id="save" parameterType="com.bootdo.smoke.domain.SmokeDO" useGeneratedKeys="true" keyProperty="id">
+		insert into t_smoke
+		(
+			`smokename`,
+			`smokemoney`,
+			`smokefactory`,
+			`evaluation`
+		)
+		values
+		(
+			#{smokename},
+			#{smokemoney},
+			#{smokefactory},
+			#{evaluation}
+		)
+	</insert>
+
+    <update id="update" parameterType="com.bootdo.smoke.domain.SmokeDO">
+        update t_smoke
+        <set>
+            <if test="smokename != null">`smoke_name` = #{smokename}, </if>
+            <if test="smokemoney != null">`smoke_money` = #{smokemoney}</if>
+            <if test="smokefactory != null">`smoke_factory` = #{smokefactory}</if>
+            <if test="evaluation != null">`evaluation` = #{evaluation}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="remove">
+		delete from t_smoke where id = #{value}
+	</delete>
+
+    <delete id="batchRemove">
+        delete from t_smoke where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
