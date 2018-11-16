@@ -8,7 +8,7 @@
 	</select>
 
     <select id="list" resultType="com.bootdo.smoke.domain.SmokeDO">
-        select `id`,`smoke_name`,`smoke_money`,`smoke_factory`,`evaluation` from t_smoke
+        select `id`,`smokename`,`smokemoney`,`smokefactory`,`evaluation` from t_smoke
         <where>
             <if test="id != null and id != ''"> and id = #{id} </if>
             <if test="smokename != null and smokename != ''"> and smokename = #{smokename} </if>
@@ -60,9 +60,9 @@
     <update id="update" parameterType="com.bootdo.smoke.domain.SmokeDO">
         update t_smoke
         <set>
-            <if test="smokename != null">`smoke_name` = #{smokename}, </if>
-            <if test="smokemoney != null">`smoke_money` = #{smokemoney}</if>
-            <if test="smokefactory != null">`smoke_factory` = #{smokefactory}</if>
+            <if test="smokename != null">`smokename` = #{smokename}, </if>
+            <if test="smokemoney != null">`smokemoney` = #{smokemoney}</if>
+            <if test="smokefactory != null">`smokefactory` = #{smokefactory}</if>
             <if test="evaluation != null">`evaluation` = #{evaluation}</if>
         </set>
         where id = #{id}
